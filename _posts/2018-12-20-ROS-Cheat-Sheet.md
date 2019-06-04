@@ -2,7 +2,7 @@
 layout:     post
 title:      ROS: Romantic Operating System 
 subtitle:   A Cheat Sheet Guid To ROS
-date:       2018-11-07
+date:       2019-01-31
 author:     Yaodong Cui
 header-img: img/post-bg-blackcameras.jpg
 header-mask: 0.5
