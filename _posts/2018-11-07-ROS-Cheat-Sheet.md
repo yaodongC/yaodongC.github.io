@@ -1,15 +1,16 @@
 ---
 layout:     post
-title:      ROS: Romantic Operating System 
-subtitle:   A Cheat Sheet Guid To ROS
-date:       2019-01-31
+title:      ROS Cheat Sheat
+subtitle:   Romantic Operating System Guid
+date:       2018-11-07
 author:     Yaodong Cui
-header-img: img/post-bg-blackcameras.jpg
+header-img: img/post-bg-basketball.jpg
 header-mask: 0.5
 catalog: true
 tags:
-    -  ROS
-    -  Cheat Sheet
+    - ROS
+    - Cheat Sheet
+    - DEEP LEARNING
 ---
 
 # ROS Cheat Sheet
