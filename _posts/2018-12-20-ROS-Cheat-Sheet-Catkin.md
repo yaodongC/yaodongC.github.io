@@ -2,9 +2,9 @@
 layout:     post
 title:      ROS Cheat Sheat
 subtitle:   Romantic Operating System Guid
-date:       2019-06-04
+date:       2018-12-20
 author:     Yaodong Cui
-header-img: img/post-bg-peoplecross.jpg
+header-img: img/post-bg-gears.jpg
 header-mask: 0.5
 catalog: true
 tags:
