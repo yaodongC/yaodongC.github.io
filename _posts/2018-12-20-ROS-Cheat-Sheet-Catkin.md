@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:     ROS Catkin: Romantic Operating System 
+title:      ROS Catkin: Romantic Operating System 
 subtitle:   A Cheat Sheet Guid To ROS Catkin
 date:       2018-12-20
 author:     Yaodong Cui
@@ -11,9 +11,6 @@ tags:
     -  ROS
     -  Cheat Sheet
 ---
-
-
-
 
 # ROS Indigo Cheatsheet
 

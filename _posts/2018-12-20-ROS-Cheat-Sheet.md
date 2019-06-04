@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:     ROS: Romantic Operating System 
+title:      ROS: Romantic Operating System 
 subtitle:   A Cheat Sheet Guid To ROS
 date:       2018-11-07
 author:     Yaodong Cui
@@ -11,9 +11,6 @@ tags:
     -  ROS
     -  Cheat Sheet
 ---
-
-
-
 
 # ROS Cheat Sheet
 
