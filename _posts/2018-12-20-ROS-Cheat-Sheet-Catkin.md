@@ -1,15 +1,15 @@
 ---
 layout:     post
-title:      ROS Catkin: Romantic Operating System 
-subtitle:   A Cheat Sheet Guid To ROS Catkin
-date:       2018-12-20
+title:      Let's Face It
+subtitle:   A Introduction To The Facial Recognition System
+date:       2019-06-04
 author:     Yaodong Cui
-header-img: img/post-bg-gears.jpg
+header-img: img/post-bg-peoplecross.jpg
 header-mask: 0.5
 catalog: true
 tags:
-    -  ROS
-    -  Cheat Sheet
+    - FACIAL EXPRESSION
+    - DEEP LEARNING
 ---
 
 # ROS Indigo Cheatsheet
