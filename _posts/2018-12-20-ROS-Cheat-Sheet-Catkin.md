@@ -1,14 +1,15 @@
 ---
 layout:     post
-title:      Let's Face It
-subtitle:   A Introduction To The Facial Recognition System
+title:      ROS Cheat Sheat
+subtitle:   Romantic Operating System Guid
 date:       2019-06-04
 author:     Yaodong Cui
 header-img: img/post-bg-peoplecross.jpg
 header-mask: 0.5
 catalog: true
 tags:
-    - FACIAL EXPRESSION
+    - ROS
+    - Cheat Sheet
     - DEEP LEARNING
 ---
 
