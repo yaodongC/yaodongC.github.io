@@ -18,6 +18,15 @@ tags:
 
 
 
+<br>
+<div  align="center"> 
+    <img 
+    src="https://raw.githubusercontent.com/yaodongC/yaodongC.github.io/master/post_img/1900604/facedataset.PNG"
+    width = "2700" height = "1700"></div>
+ <div align="center">Fig.1   FACIAL EXPRESSION DATABASES.</div>
+<br> 
+
+
 
 
 
