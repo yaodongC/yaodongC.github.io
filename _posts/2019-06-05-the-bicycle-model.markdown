@@ -21,7 +21,7 @@ Kinematic Bicycle Model is a 2-DOF handling model(yaw-plane models). It captures
     <img
     src="https://raw.githubusercontent.com/yaodongC/yaodongC.github.io/master/post_img/190605/Kinematic-bicycle-model-representation.png"
     width = "800" height = "400"></div>
-    <div align="center">Fig.1  The Kinematic Bicycle Model.</div>
+  <div align="center">Fig.1  The Kinematic Bicycle Model.</div>
 <br>
 
 <br> Bicycle model could be linear or nonlinear. It's tire model could be linear or nonlinear. No braking/traction inputs is considered in this model.

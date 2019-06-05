@@ -32,7 +32,7 @@ The slip angle of a vehicle describes the ratio of forward and lateral velocitie
     <img
     src="https://raw.githubusercontent.com/yaodongC/yaodongC.github.io/master/post_img/190605/Wheel-Slip-Calculation-The-tire-slip-angle-a-is-defined-to-be-the-angle-between-the.png"
     width = "202" height = "256"></div>
-    <div align="center">Fig.1  Tire slip angle.</div>
+  <div align="center">Fig.1  Tire slip angle.</div>
 <br>
 
 # Body-slip angle
@@ -43,7 +43,7 @@ The slip angle of a vehicle describes the ratio of forward and lateral velocitie
     <img
     src="https://raw.githubusercontent.com/yaodongC/yaodongC.github.io/master/post_img/190605/bodyslip.gif"
     width = "564" height = "173"></div>
-    <div align="center">Fig.1  Tire slip angle.</div>
+  <div align="center">Fig.1  Tire slip angle.</div>
 <br>
 
 Body-slip angle is the angle between the X-axis and the velocity vector that represents the instantaneous vehicle velocity at that point along the path.

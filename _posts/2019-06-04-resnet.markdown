@@ -11,3 +11,30 @@ tags:
     - ResNet
     - DEEP LEARNING
 ---
+
+# ResNet：Residual learning
+
+Since the groundbreaking work of AlexNet, people has been trying to build a deeper network. ResNet is one of the most successful attempt, which allows the training of network with Honduras or even thousands of layers possible.
+<br>
+<div  align="center">
+    <img
+    src="https://raw.githubusercontent.com/yaodongC/yaodongC.github.io/master/post_img/190604/resnetblock.png"
+    width = "2700" height = "1700"></div>
+ <div align="center">Fig.1 The building block of Residual learning.</div>
+<br>
+
+<br> One of the biggest challenges of increasing the depth of neural networks is the vanishing/exploding gradient problem. This is caused by the repeated multiplication of a number smaller/bigger than 1 (when using Sigmoid as activation function) during the back-propagation. As a result, in deep neural network error can not be propagate back through the network, causing the network unable to converge/learn during the training.
+
+<br> ResNet tackles this problem with "identity shortcut connection", as shown in Fig.1.
+The shortcuts between layers perform as identity mapping, meaning outputs from two layers are added together as the outputs of the stacks.
+
+
+<br> The architecture of ResNet can be attribute to a sub-solution of the Highway Network. However, ResNet outperformed Highway Network. This is somewhat counter intuitive as the solution space of Highway Network contains ResNet. Therefore, Highway Network should be at least as good as ResNet. This could mean Highway Network may requires more data to converge properly.  
+<br>
+<div  align="center">
+    <img
+    src="https://raw.githubusercontent.com/yaodongC/yaodongC.github.io/master/post_img/190604/resnetresult.png"
+    width = "700" height = "200"></div>
+ <div align="center">Fig.2 Training onImageNet. Thin curves denote training error, and bold curves denote validation error of the center crops. Left: plain networks of 18 and 34 layers. Right: ResNets of 18 and 34 layers. In this plot, the residual networks have no extra parameter compared to their plain counterparts.</div>
+<br>
+<br> When trained on ImageNet dataset, a 34-layer ResNet outperformed its 18-layer counterpart, while the 34-layer network without residual connection perform worse than its 18-layer counterpart. The result is shown in Fig.2.  
