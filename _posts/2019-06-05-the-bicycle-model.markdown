@@ -4,7 +4,7 @@ title: "The Kinematic Bicycle Model"
 subtitle:   a 2-DOF handling model
 date:       2019-06-05
 author:     Yaodong Cui
-header-img: img/post-bg-book1.jpg
+header-img: img/post-bg-coffee3.jpg
 header-mask: 0.5
 catalog: true
 tags:

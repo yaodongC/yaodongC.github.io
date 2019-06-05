@@ -4,7 +4,7 @@ title: "Vehicle Dynamics Basics"
 subtitle:   A Beginner's Guid to Vehicle Dynamics
 date:       2019-06-05
 author:     Yaodong Cui
-header-img: img/post-bg-book1.jpg
+header-img: img/post-bg-coffee2.jpg
 header-mask: 0.5
 catalog: true
 tags:
