@@ -10,7 +10,6 @@ catalog: true
 tags:
     - ROS
     - Cheat Sheet
-    - DEEP LEARNING
 ---
 
 # ROS Indigo Cheatsheet

@@ -1,0 +1,13 @@
+---
+layout:     post
+title:      "ResNet"
+subtitle:   A Shortcut for Vanishing/Exploding Gradient
+date:       2019-06-07
+author:     Yaodong Cui
+header-img: img/post-bg-book1.jpg
+header-mask: 0.5
+catalog: true
+tags:
+    - ResNet
+    - DEEP LEARNING
+---
