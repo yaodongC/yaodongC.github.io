@@ -99,6 +99,9 @@ service-worker: true
 # profile
 friends: [
   {
+      title: "My LinkedIn",
+      href: "https://www.linkedin.com/in/yaodong-cui-5b8a70158/"
+  },{
         title: "Waterloo Cognitive Autonomous Driving Lab",
         href: "https://uwaterloo.ca/cognitive-autonomous-driving-lab/"
     },{
@@ -108,5 +111,5 @@ friends: [
         title: "Lanqin Yao's Website",
         href: "https://www.lanqin.live/"
     }
-    
+
 ]
