@@ -23,7 +23,14 @@ A mathematical term for n-dimensional arrrys (arrays, vectors, matrices, scalars
 - Axes:  An axis of a tensor is a specific dimension of a tensor.
 
 Note: scalars have rank [None], 1D vectors have rank [1], etc.
-
+<br> In PyTorch use the following method to check tensor's size and rank:
+```python
+data = np.array([1,2,3])  # create a numpy array, dtype=int32
+t    = torch.tensor(data) # use the class constructor, dtype=torch.float32
+t.size()                  # use size method to check tensor size
+t.shape                   # use shape attribute to check tensor size
+len(t.shape)             # check tensor's Rank
+```
 # Tensor in PyTorch
 
 <br> PyTorch tensors are instances of the torch.Tensor Python class. A torch.Tensor is a multi-dimensional matrix containing elements of a single data type.
@@ -99,14 +106,11 @@ x.requires_grad_()
 | 64-bit integer (signed)                                                    | `torch.int64` or `torch.long`         | `torch.LongTensor`                                                                                    | `torch.cuda.LongTensor`     |
 | Boolean                                                                    | `torch.bool`                          | [`torch.BoolTensor`](https://pytorch.org/docs/1.7.1/tensors.html#torch.BoolTensor "torch.BoolTensor") | `torch.cuda.BoolTensor`     |
 
-<!-- | Data type                | dtype         | CPU tensor         | GPU tensor              |
-| ------------------------ | ------------- | ------------------ | ----------------------- |
-|  |
-| 32-bit floating point    | torch.float32 | torch.FloatTensor  | torch.cuda.FloatTensor  |
-| 64-bit floating point    | torch.float64 | torch.DoubleTensor | torch.cuda.DoubleTensor |
-| 16-bit floating point    | torch.float16 | torch.HalfTensor   | torch.cuda.HalfTensor   |
-| 8-bit integer (unsigned) | torch.uint8   | torch.ByteTensor   | torch.cuda.ByteTensor   |
-| 8-bit integer (signed)   | torch.int8    | torch.CharTensor   | torch.cuda.CharTensor   |
-| 16-bit integer (signed)  | torch.int16   | torch.ShortTensor  | torch.cuda.ShortTensor  |
-| 32-bit integer (signed)  | torch.int32   | torch.IntTensor    | torch.cuda.IntTensor    |
-| 64-bit integer (signed)  | torch.int64   | torch.LongTensor   | torch.cuda.LongTensor   | -->
+## Tensor operations
+
+The high-level categories of tensor operations:
+
+- Reshaping operations
+- Element-wise operations
+- Reduction operations
+- Access operations
