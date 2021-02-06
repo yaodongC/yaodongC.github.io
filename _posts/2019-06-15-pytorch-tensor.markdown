@@ -25,13 +25,21 @@ A mathematical term for n-dimensional arrrys (arrays, vectors, matrices, scalars
 Note: scalars have rank [None], 1D vectors have rank [1], etc.
 <br> In PyTorch use the '.size()' and '.shape' to check tensor's size, 'len(t.shape)' to check rank and '.numel()' to check number of elements.
 ```python
+data = np.array([1,2,3])  create a numpy array, dtype=int32;
+t    = torch.tensor(data) use the class constructor, dtype=torch.float32;
+t.size()                  use size method to check tensor size;
+t.shape                   use shape attribute to check tensor size;
+len(t.shape)              check tensor's Rank;
+t.numel()                 check number of elements;
+```
+<!-- ```python
 data = np.array([1,2,3])  # create a numpy array, dtype=int32;
 t    = torch.tensor(data) # use the class constructor, dtype=torch.float32;
 t.size()                  # use size method to check tensor size;
 t.shape                   # use shape attribute to check tensor size;
 len(t.shape)             # check tensor's Rank;
 t.numel()                # check number of elements;
-```
+``` -->
 # Tensor in PyTorch
 
 <br> PyTorch tensors are instances of the torch.Tensor Python class. A torch.Tensor is a multi-dimensional matrix containing elements of a single data type.
@@ -44,12 +52,19 @@ Best Options:
 
 ### Create tensor by copying
 
-```python
+<!-- ```python
 data = np.array([1,2,3])    # create a numpy array, dtype=int32
 t1 = torch.Tensor(data)     # use the class constructor, dtype=torch.float32
 t2 = torch.tensor(data)     # use a factory function, dtype=torch.int32
 t3 = torch.as_tensor(data)  # Convert the data into a torch.Tensor, no copy
 t4 = torch.from_numpy(data) # Convert the numpy data into a torch.Tensor, no copy
+``` -->
+```python
+data = np.array([1,2,3])    create a numpy array, dtype=int32
+t1 = torch.Tensor(data)     use the class constructor, dtype=torch.float32
+t2 = torch.tensor(data)     use a factory function, dtype=torch.int32
+t3 = torch.as_tensor(data)  Convert the data into a torch.Tensor, no copy
+t4 = torch.from_numpy(data) Convert the numpy data into a torch.Tensor, no copy
 ```
 
 <br> Using the 'torch.Tensor()' class constructor create tensors with 'dtype=torch.float32', which could be overkill for certain cases. This is bevause the default dtype of torch.Tensor objects is 'float32'. Just avoid this method.
