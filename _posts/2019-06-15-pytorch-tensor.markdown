@@ -23,13 +23,14 @@ A mathematical term for n-dimensional arrrys (arrays, vectors, matrices, scalars
 - Axes:  An axis of a tensor is a specific dimension of a tensor.
 
 Note: scalars have rank [None], 1D vectors have rank [1], etc.
-<br> In PyTorch use the following method to check tensor's size and rank:
+<br> In PyTorch use the '.size()' and '.shape' to check tensor's size, 'len(t.shape)' to check rank and '.numel()' to check number of elements.
 ```python
 data = np.array([1,2,3])  # create a numpy array, dtype=int32
 t    = torch.tensor(data) # use the class constructor, dtype=torch.float32
 t.size()                  # use size method to check tensor size
 t.shape                   # use shape attribute to check tensor size
 len(t.shape)             # check tensor's Rank
+t.numel()                # check number of elements
 ```
 # Tensor in PyTorch
 
@@ -114,3 +115,9 @@ The high-level categories of tensor operations:
 - Element-wise operations
 - Reduction operations
 - Access operations
+
+### Reshaping operations
+
+'.reshape()'
+
+'.squeeze()' and '.unsqueeze()'
