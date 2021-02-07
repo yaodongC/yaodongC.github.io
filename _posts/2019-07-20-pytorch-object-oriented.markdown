@@ -11,8 +11,71 @@ tags:
     - pytorch
 ---
 
+# Pytorch :
 
-# The basic building block: 'torch.nn' package
+* [Prepare the data](#Prepare the data)
+* [Build the model](#Build the model)
+* [Train the model](#Train the model)
+* [Analyze the model's results](#Analyze the model's results)
+
+
+| Package                | Description                                                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+|  |
+| torch                  | The top-level PyTorch package and tensor library.                                                                               |
+| torch.nn               | A subpackage that contains modules and extensible classes for building neural networks.                                         |
+| torch.optim            | A subpackage that contains standard optimization operations like SGD and Adam.                                                  |
+| torch.nn.functional    | A functional interface that contains typical operations used for building neural networks like loss functions and convolutions. |
+| torchvision            | A package that provides access to popular datasets, model architectures, and image transformations for computer vision.         |
+| torchvision.transforms | An interface that contains common transforms for image processing.                                                              |
+
+## Prepare the data
+
+- Extract – Get the data from the source.
+- Transform – Put our data into tensor form.
+- Load – Put our data into an object to make it easily accessible.
+
+For these purposes, PyTorch provides us with two classes:
+
+| Class                       | Description                                                           |
+| --------------------------- | --------------------------------------------------------------------- |
+|  |
+| torch.utils.data.Dataset    | An abstract class for representing a (Python iterable over) dataset.  |
+| torch.utils.data.DataLoader | Wraps a dataset and provides access to the underlying data.           |
+
+An abstract class is a Python class that has methods we must implement, so we can create a custom dataset by creating a subclass that extends the functionality of the Dataset class.
+
+To create a custom dataset using PyTorch, we extend the Dataset class by creating a subclass that implements these required methods. Upon doing this, our new subclass can then be passed to the a PyTorch DataLoader object.
+
+### Dataset Types
+The most important argument of DataLoader constructor is dataset, which indicates a dataset object to load data from. PyTorch supports two different types of datasets:
+- [map-style datasets](https://pytorch.org/docs/stable/data.html#map-style-datasets)
+- [iterable-style datasets](https://pytorch.org/docs/stable/data.html#iterable-style-datasets)
+
+#### Map-style datasets: ['torch.utils.data.Dataset'](https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset)
+
+A map-style dataset is one that implements the '__getitem__()' and '__len__()' protocols, and represents a map from (possibly non-integral) indices/keys to data samples.
+
+For example, such a dataset, when accessed with 'dataset[idx]', could read the 'idx-th' image and its corresponding label from a folder on the disk.
+
+#### Iterable-style datasets: ['torch.utils.data.IterableDataset'](https://pytorch.org/docs/stable/data.html#torch.utils.data.IterableDataset)
+
+An iterable-style dataset is an instance of a subclass of 'IterableDataset' that implements the' __iter__()' protocol, and represents an iterable over data samples. This type of datasets is particularly suitable for cases where **random reads are expensive or even improbable (large datasets)**, and where the batch size depends on the fetched data.
+
+For example, such a dataset, when called 'iter(dataset)', could return a stream of data reading from a database, a remote server, or even logs generated in real time.
+
+
+
+## Build the model
+
+
+
+- Create a neural network class that extends the nn.Module base class.
+- In the class constructor, define the network’s layers as class attributes using pre-built layers from torch.nn.
+- Use the network’s layer attributes as well as operations from the nn.functional API to define the network’s forward pass.
+
+
+### The basic building block: 'torch.nn' package
 
 'torch.nn.Module' is b the base class for all neural network modules. Your models/layers should also subclass this class.
 
@@ -21,15 +84,6 @@ class Model(nn.Module):
     def __init__(self):
         super(Model, self).__init__()
 ```
-
-## Building a model in PyTorch
-
-
-
-- Create a neural network class that extends the nn.Module base class.
-- In the class constructor, define the network’s layers as class attributes using pre-built layers from torch.nn.
-- Use the network’s layer attributes as well as operations from the nn.functional API to define the network’s forward pass.
-
 
 ```python
 class Network(nn.Module):
@@ -65,6 +119,12 @@ class Network(nn.Module):
 
       return t`
 ```
+
+#
+
+
+
+
 
 
 ## Container classes
