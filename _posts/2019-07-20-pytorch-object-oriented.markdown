@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pytorch  Object Oriented Programming"
+title: "Pytorch Object Oriented Programming"
 subtitle:   A Beginner's Guid to Pytorch 02
 date:       2019-07-20
 author:     Yaodong Cui
@@ -11,12 +11,12 @@ tags:
     - pytorch
 ---
 
-# Pytorch :
+# Build Model in Pytorch :
 
-* [Prepare the data](#Prepare the data)
+<!-- * [Prepare the data](#Prepare the data)
 * [Build the model](#Build the model)
 * [Train the model](#Train the model)
-* [Analyze the model's results](#Analyze the model's results)
+* [Analyze the model's results](#Analyze the model's results) -->
 
 
 | Package                | Description                                                                                                                     |
@@ -47,7 +47,7 @@ An abstract class is a Python class that has methods we must implement, so we ca
 
 To create a custom dataset using PyTorch, we extend the Dataset class by creating a subclass that implements these required methods. Upon doing this, our new subclass can then be passed to the a PyTorch DataLoader object.
 
-### Dataset Types
+### Dataset
 The most important argument of DataLoader constructor is dataset, which indicates a dataset object to load data from. PyTorch supports two different types of datasets:
 - [map-style datasets](https://pytorch.org/docs/stable/data.html#map-style-datasets)
 - [iterable-style datasets](https://pytorch.org/docs/stable/data.html#iterable-style-datasets)
@@ -64,12 +64,12 @@ An iterable-style dataset is an instance of a subclass of 'IterableDataset' that
 
 For example, such a dataset, when called 'iter(dataset)', could return a stream of data reading from a database, a remote server, or even logs generated in real time.
 
+### DataLoader
+
+[DataLoader](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader) supports automatically collating individual fetched data samples into batches via arguments 'batch_size', 'drop_last', and 'batch_sampler'.
 
 
 ## Build the model
-
-
-
 - Create a neural network class that extends the nn.Module base class.
 - In the class constructor, define the network’s layers as class attributes using pre-built layers from torch.nn.
 - Use the network’s layer attributes as well as operations from the nn.functional API to define the network’s forward pass.
@@ -117,17 +117,52 @@ class Network(nn.Module):
         t = self.out(t)
         #t = F.softmax(t, dim=1)
 
-      return t`
+      return t
 ```
 
-#
+```python
+network.conv1.weight
+network.conv1.weight.shape
+for name, param in network.named_parameters():
+    print(name, '\t\t', param.shape)
+```
+
+
+
+## Train the model
+
+```python
+network = Network()
+
+train_loader = torch.utils.data.DataLoader(train_set, batch_size=100)
+optimizer = optim.Adam(network.parameters(), lr=0.01)
+
+batch = next(iter(train_loader)) # Get Batch
+images, labels = batch
+
+preds = network(images) # Pass Batch
+loss = F.cross_entropy(preds, labels) # Calculate Loss
+
+loss.backward() # Calculate Gradients
+optimizer.step() # Update Weights
+
+print('loss1:', loss.item())
+preds = network(images)
+loss = F.cross_entropy(preds, labels)
+print('loss2:', loss.item())
+```
+
+
+
+## Analyze the model's results
 
 
 
 
 
 
-## Container classes
+
+### Container classes
 This is an abstract Module class which declares methods defined in all containers. It reimplements many of the Module methods such that calls are propagated to the contained modules.
 
 
